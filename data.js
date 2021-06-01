@@ -16,14 +16,14 @@ export default {
             price: "7,00",
             brand: "Cremer"
         },
-/*         {
+        {
             _id: '3',
             name: "Lima K 1ª Série",
             category: "Endodontia",
             image: "/images/limaKPrimeiraSérie.jpg",
             price: "25,90",
             brand: "Golgran"
-        }, */
+        },
         {
             _id: '4',
             name: "Sugador Endodôntico Descartável",
