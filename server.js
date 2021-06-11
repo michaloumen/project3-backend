@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:3001', //habilitando somente o front a consumir nossa API
+    origin: 'http://localhost:3000', //habilitando somente o front a consumir nossa API
 }));//habilitando nossa API para receber requisições de qualquer origem
 
 app.get("/api/products/:id", (req, res) => {
