@@ -1,4 +1,4 @@
-export default {
+/* export default {
     products: [
         {
             _id: '1',
@@ -56,4 +56,4 @@ export default {
             countInStock: 11
         },
     ]
-}
+} */
