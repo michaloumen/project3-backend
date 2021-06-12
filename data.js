@@ -7,7 +7,8 @@ export default {
             image: "/images/jogoClinico.jpg",
             price: 80.00,
             brand: "Golgran",
-            countInStock: 6
+            countInStock: 6,
+            description: "oi"
         },
         {
             _id: '2',
