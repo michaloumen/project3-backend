@@ -24,8 +24,9 @@ export const isAuth = (req, res, next) => {
             next();
             return
         });
+    } else {
+        return res.status(401).send({ msg: "Token não foi fornecido" })
     }
-    return res.status(401).send({ msg: "Token não foi fornecido" })
 };
 
 export const isAdmin = (req, res, next) => {
@@ -33,7 +34,7 @@ export const isAdmin = (req, res, next) => {
         return next();
     }
     return res.status(401).send({ msg: "Admin Token não é valido" })
-}
+};
 
 
 
