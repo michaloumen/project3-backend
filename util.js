@@ -13,10 +13,10 @@ export const getToken = (user) => {
 }
 
 export const isAuth = (req, res, next) => {
-    const token = req.headers.authorization;
-    if (token) {
-        const onlyToken = token.slice(7, token.length);
-        jwt.verify(onlyToken, process.env.JWT_SECRET, (err, decode) => {
+    const authorization = req.headers.authorization;
+    if (authorization) {
+        const token = authorization.slice(7, authorization.length); /* Barear XXXXXXx */
+        jwt.verify(token, process.env.JWT_SECRET, (err, decode) => {
             if (err) {
                 return res.status(401).send({ msg: "Token Inválido" });
             }
@@ -36,5 +36,6 @@ export const isAdmin = (req, res, next) => {
     return res.status(401).send({ msg: "Admin Token não é valido" })
 };
 
+/* isAdmin e isAuth não estão funcionando :( */
 
 
