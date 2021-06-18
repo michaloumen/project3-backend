@@ -8,6 +8,8 @@ const productSchema = new mongoose.Schema({
     brand: { type: String, required: true },
     countInStock: { type: Number, default: 0, required: true },
     description: { type: String, required: true },
+}, {
+    timestamps: true,
 });
 
 const productModel = mongoose.model("Product", productSchema);

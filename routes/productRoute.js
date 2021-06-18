@@ -1,6 +1,5 @@
 import express from 'express';
 import Product from '../models/productModel';
-import { isAuth, isAdmin } from '../util';
 
 const router = express.Router();
 
@@ -67,5 +66,3 @@ router.delete("/:id", async (req, res) => {
 });
 
 export default router;
-
-/* OBS: qnd eu tento adicionar as rotas de isAdmin, editar e apagar não funcionam mais */
