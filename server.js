@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import userRoute from './routes/userRoute';
 import productRoute from './routes/productRoute';
+import orderRouter from './routes/orderRouter';
 const cors = require('cors');
 
 dotenv.config();
@@ -26,6 +27,8 @@ app.use(cors({
 app.use("/api/users", userRoute);
 
 app.use("/api/products", productRoute);
+
+app.use('/api/orders', orderRouter);
 
 app.get("/api/products/:id", (req, res) => {
     const productId = req.params.id;
