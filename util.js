@@ -8,9 +8,10 @@ export const getToken = (user) => {
         isAdmin: user.isAdmin,
 
     }, process.env.JWT_SECRET, {
-        expiresIn: '48h'
+        expiresIn: process.env.EXPIRATION_AUTH_TOKEN
     })
 }
+/* '48h' */
 
 export const isAuth = (req, res, next) => {
     const authorization = req.headers.authorization;
