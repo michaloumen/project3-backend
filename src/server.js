@@ -21,7 +21,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: process.env.PORT, //habilitando somente o front a consumir nossa API
+    origin: process.env.FRONT_END_URL, //habilitando somente o front a consumir nossa API
 }));//habilitando nossa API para receber requisições de qualquer origem
 
 app.use("/api/users", userRoute);
@@ -43,4 +43,4 @@ app.get("/api/products", (req, res) => {
     res.json(data.products);
 });
 
-app.listen(process.env.PORT2, () => { console.log(`Server started at http://localhost:${process.env.PORT2}`) })
+app.listen(process.env.PORT, () => { console.log(`Server started at http://localhost:${process.env.PORT}`) })
